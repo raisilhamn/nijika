@@ -1,1 +1,1 @@
-![](https://nijika.my.id/bye.gif)
+![](bye.gif)
