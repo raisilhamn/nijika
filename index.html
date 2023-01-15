@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="nijika_gif.gif" type="image/gif" />
+  <title>Nijika Ijichi</title>
+  <meta charset="UTF-8" />
+  <script data-host="https://anlytics.co" data-dnt="false" src="https://anlytics.co/js/script.js" id="ZwSg9rf6GA" async
+    defer></script>
+
+  <style>
+    .center-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    .linkAll {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center-content">
+    <a style="cursor: pointer">
+      <img id="gif" src="bye.gif" style="transform: scale(1.5)" onclick="playVideo()" />
+    </a>
+    <video id="video" src="bye.webm" style="display: none; width: 80%; height: auto" controls></video>
+
+    <a class="linkAll" id="link1" h style="margin-top: 10px" ref="https://youtu.be/po6xKrZ7HrI">ぼっち・ざ・ろっく！虹夏ちゃんセリフ集</a>
+
+    <a class="linkAll" id="link2" href="https://www.youtube.com/watch?v=Dy2iVNTLX8M">Collection of Nijika scenes</a>
+    <a class="linkAll" id="link3" href="https://youtu.be/K6kNAZPh-yo">Nijika - Pachi Pachi Pachi -</a>
+    <a class="linkAll" id="link4" href="https://www.youtube.com/watch?v=jkAr25tA7SA">Metric - Lost Kitten Nijika (Bocchi
+      the Rock)</a>
+    <a class="linkAll" id="link5" href="https://www.youtube.com/watch?v=_T4hctggXFk">ぬ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ん゛cat</a>
+    <a class="linkAll" id="link6" href="https://www.youtube.com/watch?v=HerstgdOq6I">
+      ニジカムキムキニジカ</a>
+
+    <span id="hideButton" style="margin-top: 10px; cursor: pointer; color: blue"
+      onclick="hideElements()">&lt;&lt;back</span>
+  </div>
+
+  <script>
+    var gif = document.getElementById("gif");
+    var video = document.getElementById("video");
+    var links = document.querySelectorAll("a[id^='link']");
+    var hideButton = document.getElementById("hideButton");
+
+    function playVideo() {
+      gif.style.display = "none";
+      video.style.display = "flex";
+      for (var i = 0; i < links.length; i++) {
+        links[i].style.display = "block";
+      }
+    }
+
+    function hideElements() {
+      gif.style.display = "flex";
+      video.style.display = "none";
+      for (var i = 0; i < links.length; i++) {
+        links[i].style.display = "none";
+      }
+    }
+    hideButton.addEventListener("click", hideElements);
+  </script>
+</body>
+
+</html>
