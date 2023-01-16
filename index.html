@@ -48,28 +48,40 @@
   </div>
 
   <script>
+    // Declare variables
     var gif = document.getElementById("gif");
     var video = document.getElementById("video");
     var links = document.querySelectorAll("a[id^='link']");
     var hideButton = document.getElementById("hideButton");
 
+    // Functions
     function playVideo() {
+      // Hide the gif
       gif.style.display = "none";
+      // Show the video
       video.style.display = "flex";
+      // Loop through all links
       for (var i = 0; i < links.length; i++) {
+        // Show each link
         links[i].style.display = "block";
       }
     }
 
     function hideElements() {
+      // Show the gif
       gif.style.display = "flex";
+      // Hide the video
       video.style.display = "none";
+      // Loop through all links
       for (var i = 0; i < links.length; i++) {
+        // Hide each link
         links[i].style.display = "none";
       }
     }
+
+    // Event Listener
     hideButton.addEventListener("click", hideElements);
-    
+
   </script>
 </body>
 
