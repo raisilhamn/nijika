@@ -76,6 +76,7 @@
 
 			<span
 				id="hideButton"
+				class="linkAll"
 				style="margin-top: 10px; cursor: pointer; color: blue"
 				onclick="hideElements()"
 				>&lt;&lt;back</span
@@ -97,6 +98,8 @@
 				video.style.display = 'flex';
 				// Show all links
 				links.style.display = 'block';
+				// Show the back button
+				hideButton.style.display = 'block';
 			}
 
 			function hideElements() {
@@ -106,6 +109,8 @@
 				video.style.display = 'none';
 				// Hide all links
 				links.style.display = 'none';
+				// Hide the back button
+				hideButton.style.display = 'block';
 			}
 
 			// Event Listener
