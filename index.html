@@ -1,88 +1,115 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<link rel="icon" href="nijika_scary.gif" type="image/gif" />
+		<title>Nijika Ijichi</title>
+		<meta charset="UTF-8" />
+		<script
+			data-host="https://anlytics.co"
+			data-dnt="false"
+			src="https://anlytics.co/js/script.js"
+			id="ZwSg9rf6GA"
+			async
+			defer
+		></script>
 
-<head>
-  <link rel="icon" href="nijika_scary.gif" type="image/gif" />
-  <title>Nijika Ijichi</title>
-  <meta charset="UTF-8" />
-  <script data-host="https://anlytics.co" data-dnt="false" src="https://anlytics.co/js/script.js" id="ZwSg9rf6GA" async
-    defer></script>
+		<style>
+			.center-content {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				min-height: 100vh;
+				flex-direction: column;
+			}
 
-  <style>
-    .center-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 100vh;
-      flex-direction: column;
-    }
+			.linkAll {
+				margin-top: 10px;
+				display: none;
+			}
+			.top {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
 
-    .linkAll {
-      margin-top: 10px;
-      display: none;
-    }
-  </style>
-</head>
+	<body>
+		<div class="center-content">
+			<a style="cursor: pointer">
+				<img
+					id="gif"
+					src="bye.gif"
+					style="transform: scale(1.5)"
+					onclick="playVideo()"
+				/>
+			</a>
+			<video
+				id="video"
+				src="bye.webm"
+				style="display: none; width: 80%; height: auto"
+				controls
+			></video>
 
-<body>
-  <div class="center-content">
-    <a style="cursor: pointer">
-      <img id="gif" src="bye.gif" style="transform: scale(1.5)" onclick="playVideo()" />
-    </a>
-    <video id="video" src="bye.webm" style="display: none; width: 80%; height: auto" controls></video>
+			<div class="linkAll" id="link">
+				<a href="https://youtu.be/po6xKrZ7HrI" style="margin-top: 10px"
+					>ぼっち・ざ・ろっく！虹夏ちゃんセリフ</a
+				>
+				<br class="top" />
+				<a href="https://www.youtube.com/watch?v=Dy2iVNTLX8M"
+					>Collection of Nijika scenes</a
+				>
+				<br class="top" />
+				<a href="https://youtu.be/K6kNAZPh-yo">Nijika - Pachi Pachi Pachi -</a>
+				<br class="top" />
+				<a href="https://www.youtube.com/watch?v=jkAr25tA7SA"
+					>Metric - Lost Kitten Nijika (Bocchi the Rock)</a
+				>
+				<br class="top" />
+				<a href="https://www.youtube.com/watch?v=_T4hctggXFk"
+					>ぬ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ん゛cat</a
+				>
+				<br class="top" />
+				<a href="https://www.youtube.com/watch?v=HerstgdOq6I">
+					ニジカムキムキニジカ</a
+				>
+			</div>
 
-    <a class="linkAll" id="link1" href="https://youtu.be/po6xKrZ7HrI" style="margin-top: 10px">ぼっち・ざ・ろっく！虹夏ちゃんセリフ</a>
-    <a class="linkAll" id="link2" href="https://www.youtube.com/watch?v=Dy2iVNTLX8M">Collection of Nijika scenes</a>
-    <a class="linkAll" id="link3" href="https://youtu.be/K6kNAZPh-yo">Nijika - Pachi Pachi Pachi -</a>
-    <a class="linkAll" id="link4" href="https://www.youtube.com/watch?v=jkAr25tA7SA">Metric - Lost Kitten Nijika (Bocchi
-      the Rock)</a>
-    <a class="linkAll" id="link5" href="https://www.youtube.com/watch?v=_T4hctggXFk">ぬ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ぅ゛ん゛cat</a>
-    <a class="linkAll" id="link6" href="https://www.youtube.com/watch?v=HerstgdOq6I">
-      ニジカムキムキニジカ</a>
+			<span
+				id="hideButton"
+				style="margin-top: 10px; cursor: pointer; color: blue"
+				onclick="hideElements()"
+				>&lt;&lt;back</span
+			>
+		</div>
 
-    <span id="hideButton" style="margin-top: 10px; cursor: pointer; color: blue"
-      onclick="hideElements()">&lt;&lt;back</span>
+		<script>
+			// Declare variables
+			var gif = document.getElementById('gif');
+			var video = document.getElementById('video');
+			var links = document.getElementById('link');
+			var hideButton = document.getElementById('hideButton');
 
+			// Functions
+			function playVideo() {
+				// Hide the gif
+				gif.style.display = 'none';
+				// Show the video
+				video.style.display = 'flex';
+				// Show all links
+				links.style.display = 'block';
+			}
 
-  </div>
+			function hideElements() {
+				// Show the gif
+				gif.style.display = 'flex';
+				// Hide the video
+				video.style.display = 'none';
+				// Hide all links
+				links.style.display = 'none';
+			}
 
-  <script>
-    // Declare variables
-    var gif = document.getElementById("gif");
-    var video = document.getElementById("video");
-    var links = document.querySelectorAll("a[id^='link']");
-    var hideButton = document.getElementById("hideButton");
-
-    // Functions
-    function playVideo() {
-      // Hide the gif
-      gif.style.display = "none";
-      // Show the video
-      video.style.display = "flex";
-      // Loop through all links
-      for (var i = 0; i < links.length; i++) {
-        // Show each link
-        links[i].style.display = "block";
-      }
-    }
-
-    function hideElements() {
-      // Show the gif
-      gif.style.display = "flex";
-      // Hide the video
-      video.style.display = "none";
-      // Loop through all links
-      for (var i = 0; i < links.length; i++) {
-        // Hide each link
-        links[i].style.display = "none";
-      }
-    }
-
-    // Event Listener
-    hideButton.addEventListener("click", hideElements);
-
-  </script>
-</body>
-
+			// Event Listener
+			hideButton.addEventListener('click', hideElements);
+		</script>
+	</body>
 </html>
